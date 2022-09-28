@@ -206,7 +206,7 @@ class ArvoreAvl:
                 if no.direito:
                     return self.buscar_valor(valor, no.direito)
             elif valor == no.valor:
-                return no.valor
+                return no
             return False
         except TypeError:
             return "Tipo inválido"
@@ -241,7 +241,7 @@ class ArvoreAvl:
                 valor = int(input("Digite o valor para busca: "))
                 valorDaBusca = self.busca(valor)
                 if valorDaBusca:
-                    print("Item encontrado: ", valorDaBusca)
+                    print("Item encontrado: ", valorDaBusca.valor)
                 else: 
                     print("Item não encontrado")
 
