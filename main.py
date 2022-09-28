@@ -145,8 +145,8 @@ class ArvoreAvl:
 
         no.altura = max(self.retorna_altura(no.esquerdo), self.retorna_altura(no.direito)) + 1
         temp_noh_esquerdo.altura = max(self.retorna_altura(temp_noh_esquerdo.esquerdo), self.retorna_altura(temp_noh_esquerdo.direito)) + 1
-
-        print('Rotacionando para direta ', no.valor)
+        
+        print('\nRotacionando o valor', no.valor, 'para direta.')
 
     def rotacioanar_esquerda(self, no: No):
         temp_noh_direto = no.direito
@@ -173,6 +173,8 @@ class ArvoreAvl:
 
         no.altura = max(self.retorna_altura(no.esquerdo), self.retorna_altura(no.direito)) + 1
         temp_noh_direto.altura = max(self.retorna_altura(temp_noh_direto.esquerdo), self.retorna_altura(temp_noh_direto.direito)) + 1
+
+        print('\nRotacionando o valor', no.valor, 'para esquerda.')
 
     def retorna_altura(self, no: No):
         if not no:
