@@ -206,7 +206,7 @@ class ArvoreAvl:
                 if no.direito:
                     return self.buscar_valor(valor, no.direito)
             elif valor == no.valor:
-                return no
+                return no.valor
             return False
         except TypeError:
             return "Tipo inválido"
